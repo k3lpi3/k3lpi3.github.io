@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Getting started with Latex</title>
+    <link rel="stylesheet" href="./css/reveal.css" />
+    <link rel="stylesheet" href="./css/theme/blood.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template">
+
+### Getting started with  <!-- .element: style="color:yellow" -->
+## $LaTex$  <!-- .element: style="color:yellow" -->
+
+<br>
+<br>
+
+#### F. Mehmood <!-- .element: style="font-size:26px;color:white" class="fragment" data-fragment-index="1" -->
+[comment]: <> (#### RISE <!-- .element: style="font-size:26px;color:yellow"  class="fragment" data-fragment-index="1" -->)
+</script></section><section data-markdown><script type="text/template">
+## Outline <!-- .element: style="color:yellow;" -->
+
+
+- Why $Latex$ <!-- .element: class="fragment" data-fragment-index="1" style="font-size:22px" --> <br>
+<br>
+- $LaTex$ Document Layout <!-- .element: class="fragment" data-fragment-index="2"  style="font-size:22px" -->
+	- Structure  <!-- .element: class="fragment" data-fragment-index="2" -->
+	- Heading Levels  <!-- .element: class="fragment" data-fragment-index="2" -->
+	- Title <!-- .element: class="fragment" data-fragment-index="2" --> <br>
+<br>
+- Writing the $LaTex$ way  <!-- .element: class="fragment" data-fragment-index="3"  style="font-size:22px" -->
+	- Font Accents <!-- .element: class="fragment" data-fragment-index="3" -->
+	- Figures, Lists & Tables <!-- .element: class="fragment" data-fragment-index="3" -->
+	- Mathematics <!-- .element: class="fragment" data-fragment-index="3" -->
+	- References <!-- .element: class="fragment" data-fragment-index="3" --> <br>
+<br>
+- Hands-on Sessions  <!-- .element: class="fragment" data-fragment-index="4"  style="font-size:22px" -->
+	1. IEEE Conference Format <!-- .element: class="fragment" data-fragment-index="4" -->
+	1. RISE MS Thesis Format <!-- .element: class="fragment" data-fragment-index="4" -->
+</script></section></section><section  data-markdown><script type="text/template">
+## Why $LaTex$ <!-- .element: style="color:yellow;" -->
+
+<br>
+
+- Cross-Platform <!-- .element: class="fragment" data-fragment-index="1" -->
+- WYSIWYG vs WYSIWYM <!-- .element: class="fragment" data-fragment-index="2" -->
+- For students: No more MS Word Armageddon <!-- .element: class="fragment" data-fragment-index="3" -->
+- "You worry about writing, We'll worry about formatting" <!-- .element: class="fragment" data-fragment-index="4" -->
+</script></section><section ><section data-markdown><script type="text/template">
+## $LaTex$ Document Layout <!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+### Minimal Structure <!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\documentclass[12pt,a4paper]{article}
+
+% Configuration Here
+
+\begin{document}
+
+% Content Here
+
+\end{document}
+```
+
+Article vs Report <!-- .element: class="fragment" data-fragment-index="1" style="font-size:22px" -->
+</script></section><section data-markdown><script type="text/template">
+### Heading Levels <!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\documentclass[12pt,a4paper]{article}
+\usepackage{lipsum}
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+
+\begin{document}
+
+\section{Introduction}
+\lipsum[1-2]
+
+\subsection{Intro Sub-section}
+\lipsum[2-3]
+
+\subsubsection{Intro Sub-subsection}
+\lipsum[3-4]
+
+\paragraph{Note} \lipsum[3]
+
+\section{Literature Review}
+\lipsum[1-2]
+
+\subsection{LR Sub-section}
+\lipsum[2-3]
+
+\subsubsection{LR Sub-subsection}
+\lipsum[3-4]
+
+\paragraph{Note} \lipsum[3]
+
+\end{document}
+
+```
+</script></section><section data-markdown><script type="text/template">
+### Title <!-- .element: style="color:yellow;" -->
+
+```
+\documentclass[12pt,a4paper]{article}
+\usepackage{lipsum}
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+
+\author{Muhammad Ali}
+\title{Cars vs Airplanes}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\lipsum[1-2]
+\subsection{Intro Sub-section}
+\lipsum[2-3]
+\subsubsection{Intro Sub-subsection}
+\lipsum[3-4]
+\paragraph{Note} \lipsum[3]
+
+\section{Literature Review}
+\lipsum[1-2]
+\subsection{LR Sub-section}
+\lipsum[2-3]
+\subsubsection{LR Sub-subsection}
+\lipsum[3-4]
+\paragraph{Note} \lipsum[3]
+
+\end{document}
+```
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Writing the $LaTex$ Way <!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+### Font Accents<!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\textbf{Bold Text}
+
+\textit{Italicized Text}
+
+\underline{Underlined Text}
+```</script></section><section data-markdown><script type="text/template">
+### Lists<!-- .element: style="color:yellow;" -->
+
+<br>
+
+Unordered List
+<!-- .element: class="fragment" data-fragment-index="1" -->
+```
+\begin{itemize}
+	\item Football
+	\item Cricket
+	\item Basketball
+\end{itemize}
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
+
+Ordered List
+<!-- .element: class="fragment" data-fragment-index="2" -->
+```
+\begin{enumerate}
+	\item First step
+	\item Second step
+	\item Third step
+\end{enumerate}
+```
+<!-- .element: class="fragment" data-fragment-index="2" -->
+</script></section><section data-markdown><script type="text/template">
+### Figures <!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\usepackage{graphicx}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.35]{media/rise.png}
+  \caption{RISE is where I study}
+  \label{fig:studyPlace}
+\end{figure}
+```
+</script></section><section data-markdown><script type="text/template">
+### Tables <!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\begin{table}
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+ \hline\hline
+ 1 & 6 & 87837 & 787 \\ 
+ \hline
+ 2 & 7 & 78 & 5415 \\
+ \hline
+ 3 & 545 & 778 & 7507 \\
+ \hline
+ 4 & 545 & 18744 & 7560 \\
+ \hline
+ 5 & 88 & 788 & 6344 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{Cost of material}
+\label{tab:cost}
+\end{center}
+\end{table}
+```</script></section><section data-markdown><script type="text/template">
+### Mathematics <!-- .element: style="color:yellow;" -->
+
+<br>
+
+```
+\usepackage{amsmath}
+
+My favourite equation is $(a+b)^2 = a^2 + b^2 + 2ab$. But the following equation is pretty scary:
+
+\begin{align*}
+S(\omega) 
+&= \frac{\alpha g^2}{\omega^5} e^{[ -0.74\bigl\{\frac{\omega U_\omega 19.5}{g}\bigr\}^{\!-4}\,]} \\
+&= \frac{\alpha g^2}{\omega^5} \exp\Bigl[ -0.74\Bigl\{\frac{\omega U_\omega 19.5}{g}\Bigr\}^{\!-4}\,\Bigr] 
+\end{align*}
+```
+</script></section><section data-markdown><script type="text/template">
+### References <!-- .element: style="color:yellow;" -->
+
+#### Step 1(a): Label sections, figure or table <!-- .element: style="color:yellow;" -->
+
+```
+\section{Introduction} \label{sec:intro}
+```
+
+```
+\lipsum[3-4]
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{media/rise.png}
+  \caption{RISE is where I study}
+  \label{fig:studyPlace}
+\end{figure}
+```
+</script></section><section data-markdown><script type="text/template">
+#### Step 1(b): Bibliography <!-- .element: style="color:yellow;" -->
+
+```
+\begin{thebibliography}{00}
+
+\bibitem{covid}Marietta, Marco, et al. "COVID-19 and haemostasis: a position paper from Italian Society on Thrombosis and Haemostasis (SISET)." Blood Transfusion 18.3 (2020): 167.
+
+\end{thebibliography}
+```
+</script></section><section data-markdown><script type="text/template">
+#### Step 2: Referencing <!-- .element: style="color:yellow;" -->
+
+```
+\subsubsection{Intro Sub-subsection}
+
+Figure \ref{fig:studyPlace} and Section \ref{sec:introsub} are inspired from \cite{covid}.
+```
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+## Hands-on Sessions <!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+#### 1: IEEE Conference Paper <!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+#### 2: RISE MS Thesis <!-- .element: style="color:yellow;" -->
+</script></section></section><section  data-markdown><script type="text/template">
+### Questions <!-- .element: style="color:yellow;" -->
+</script></section></div>
+    </div>
+
+    <script src="./js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './plugin/zoom-js/zoom.js', async: true },
+        { src: './plugin/notes/notes.js', async: true },
+        { src: './plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
