@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>User Identification based on Keystroke Information</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/blood.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template">
+<script type="text/javascript" src="highlight.js">__SCRIPT_END__
+
+### User Identification  <!-- .element: style="color:yellow;" -->
+#### based on
+### Keystroke Information <!-- .element: style="color:yellow;" -->
+
+<br>
+
+#### F. Mehmood <!-- .element: style="color:yellow;" class="fragment" data-fragment-index="1" --></script></section><section data-markdown><script type="text/template">
+## Outline <!-- .element: style="color:yellow;" -->
+
+- Privacy <!-- .element:  style="color:white;font-size:32px" -->
+- Keystroke dynamics<!-- .element: style="color:white;font-size:32px"  class="fragment" data-fragment-index="1" -->
+- Keystroke dynamics: Threat to Privacy <!-- .element: style="color:white;font-size:32px"  class="fragment" data-fragment-index="1" -->
+- Keystroke Obfuscation Publications <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    <!-- - V. Monaco et al. (2016) <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    <!-- - J. Leinonen et at. (2017) <!-- .element: style="color:white;font-size:32px"  class="fragment" data-fragment-index="2" -->
+    <!-- - D. Midgal et al. (2019)<!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    <!-- - Limitations<!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+- Research Questions <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+- Research Methodology <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+    <!-- - Identification algorithms <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+    <!-- - Datasets <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="6" -->
+- Initial Results and Timeline for T2 <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="7" -->
+- Conclusion <!-- .element:  style="color:white;font-size:32px" class="fragment" data-fragment-index="7" -->
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide:  data-transition="slide" -->
+### Privacy <!-- .element: style="color:yellow;" -->
+
+> Privacy is the ability of an individual or group to seclude themselves or information about themselves, and thereby express themselves selectively.  [wikipedia]
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide:  data-transition="slide" -->
+### Keystroke Dynamics <!-- .element: style="color:yellow;" -->
+
+> Keystroke dynamics ...  refer to the detailed timing information which describes exactly when each key was pressed and when it was released as a person is typing at a computer keyboard [wikipedia]
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/keystrokes.png" data-background-size="contain" -->
+</script></section></section><section ><section data-markdown><script type="text/template">
+### Keystroke Dynamics 
+#### Another Threat to Privacy  <!-- .element: style="color:yellow;" -->
+
+<br>
+
+- User Authentication<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+	- Is the person really who he says he is?<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- User Identification / Profiling<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Who is currently typing?<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Privacy concerns<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+</script></section><section data-markdown><script type="text/template">
+### Timeline <!-- .element: style="color:yellow;" -->
+
+<br>
+
+- User Authentication <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+	- 1990's: Short-fixed text<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+	- Early 2000's: Long-fixed text<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+	- 2005+: Free text <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+		- Privacy concerns <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+- User Identification / Profiling <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+	- 2014+: Gender identification, programming interviews, perceived ease of website usage, mental status, etc. <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/fixed.png" data-background-size="contain" -->
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/free.png" data-background-size="contain" --></script></section></section><section ><section data-markdown><script type="text/template">
+### Keystroke Obfuscation Publications<!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+#### John V. Monaco and Charles C. Tappert
+### "Obfuscating keystroke time intervals to avoid identification and impersonation. <!-- .element: style="color:yellow;" -->
+#### arXiv preprint arXiv:1609.07612, 2016.
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+#### John V. Monaco and Charles C. Tappert <!-- .element: style="color:yellow;" -->
+
+- Concerns<!-- .element: style="color:white;font-size:32px" -->
+    - Identification<!-- .element: style="color:white;font-size:32px" -->
+    - Impersonation<!-- .element: style="color:white;font-size:32px" -->
+- Approach<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Add random delays in the keystrokes<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- Features and Classifier<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Statistical values (mean and standard deviation) were drawn from the keystroke information<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Random Forest classifier was used for decision making <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+
+#### John V. Monaco and Charles C. Tappert <!-- .element: style="color:yellow;" -->
+
+- Outcome<!-- .element: style="color:white;font-size:32px" -->
+    - The identification accuracy was reduced by 20% with a 25ms delay<!-- .element: style="color:white;font-size:32px" -->
+- Limitations<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Trained and testing on obfuscated keystrokes -> Can't identify genuine drop in identification rate<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Not comprehensively tested <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-transition="slide" -->
+#### Juho Leinonen, Petri Ihantola, and Arto Hellas.
+### Preventing keystroke based identification in open data sets. <!-- .element: style="color:yellow;" -->
+#### Proceedings of the Fourth (2017) ACM Conference on Learning@ Scale, pages 101–109, 2017
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+#### Juho Leinonen, Petri Ihantola, and Arto Hellas. <!-- .element: style="color:yellow;" -->
+
+- Concern<!-- .element: style="color:white;font-size:32px" -->
+    - Keystrokes collected from MOOC could be used to identify students.<!-- .element: style="color:white;font-size:32px" -->
+    - Simply removing student name and ID not enough to conceal their identity.<!-- .element: style="color:white;font-size:32px" -->
+- Approach<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - **Rounding**: This approach called for rounding off the timing values the to closest preset time boundary.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - **Bucketing**: This approach called for evenly distributing the timing values so that the resulting buckets of times have the same number of events each.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- Features and Classifier<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Di-graph timing features<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Naive Bayes and Random Forest Classifier<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+#### Juho Leinonen, Petri Ihantola, and Arto Hellas. <!-- .element: style="color:yellow;" -->
+
+- Outcome<!-- .element: style="color:white;font-size:32px" -->
+    - The authors found the bucketing method to yield higher anonymization<!-- .element: style="color:white;font-size:32px"  -->
+    - The identification accuracy was reduced from high nineties to around 30% with 100 ms of delays.<!-- .element: style="color:white;font-size:32px" -->
+- Limitations<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - The authors considered the system’s prediction to be correct if the correct prediction was included in the top-10 predicted identities<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - MOOC Java course keystrokes -> Not free text<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Meant to re-process collected data -> The effect on interactive use not considered<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+    - Leaves distinct signatures <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+    - Not comprehensively tested <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-transition="slide" -->
+#### Migdal, Denis, and Christophe Rosenberger. 
+### "Keystroke Dynamics Anonymization System" <!-- .element: style="color:yellow;" -->
+#### SeCrypt International Conference on Security and Cryptography. 2019.
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+#### Migdal, Denis, and Christophe Rosenberger.  <!-- .element: style="color:yellow;" -->
+
+- Concern<!-- .element: style="color:white;font-size:32px"  -->
+    - Enhance the privacy of internet users against web-borne trackers<!-- .element: style="color:white;font-size:32px" -->
+- Approach<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Costless anonymization: Don’t delay any event beyond the next frame. -> no latency cost <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Non-blocking anonymization: Delay events beyond the next frame, independently of the previous events.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Blocking anonymization: Block the next event to add specific delays relative to the preveious events.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- Features and Classifiers<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Statistical values (mean and standard deviation) of hold time and flight time<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Hocquet function<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+#### Migdal, Denis, and Christophe Rosenberger.  <!-- .element: style="color:yellow;" -->
+
+- Outcome<!-- .element: style="color:white;font-size:32px"  -->
+    - With an average latency of 150 ms, the various anonymization techniques produced EER percentages in mid thirties range.<!-- .element: style="color:white;font-size:32px"  -->
+- Limitations<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - The EER percentages were averaged across the four data sets, making it more difficult to interpret results.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Absence of tabular data coupled with unlabeled axes <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Usage of short fixed datasets <!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+    - A better look into the comparison and performance of the proposed anonymization techniques is required<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+    - Quality and presentation of paper<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-background-transition="slide" data-background-image="./media/comparisonnew.png" data-background-size="contain" -->
+</script></section></section><section  data-markdown><script type="text/template">
+## Research Questions <!-- .element: style="color:yellow;" -->
+
+<br>
+
+- Effectiveness of keystrokes based user identification?<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- Effectiveness of keystrokes obfuscation strategies?<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+</script></section><section ><section data-markdown><script type="text/template">
+## Research Methodology <!-- .element: style="color:yellow;" -->
+
+1. Use of distinct and state-of-the-art features and classifiers<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    1. Timeseries representation (2018)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    1. Distance Metric Fusion (2019)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+    1. Non-conventional Features (2017)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+    1. CNN + RNN (2020)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+2. Two of the largest publicly available free-text datasets<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="6" -->
+3. Compare identification rate with original and polluted keystroke datasets<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="7" -->
+</script></section><section data-markdown><script type="text/template">
+
+<!-- .slide:  data-transition="slide" -->
+
+##### Alshehri, Abdullah, Frans Coenen, and Danushka Bollegala.
+#### "Iterative keystroke continuous authentication: A time series based approach."<!-- .element: style="color:yellow;" -->
+##### KI-Künstliche Intelligenz 32.4 (2018): 231-243.
+
+----------
+
+- Timeseries of flight times<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- Use Dynamic Time Warping (DTW) to calculate similarity of train and test samples<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+- Designed for authentication. Would need to amend for identification task.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-background-transition="slide" data-background-image="./media/timeseries.png" data-background-size="contain" --></script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/dtw.gif" data-background-size="contain" --></script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-transition="slide" -->
+
+##### Ayotte, Blaine, et al. 
+#### "Fast continuous user authentication using distance metric fusion of free-text keystroke data." <!-- .element: style="color:yellow;" -->
+##### Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops. 2019.
+
+----------
+
+- Calculate distance measures based on CDF<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Gaussian Kernel Density Estimate (KDE)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Kolmogorov-Smirnov test<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+    - Energy Distance<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+- Fuse the three distances to classify the test sample<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+- Designed for authentication. Would need to amend for identification task.<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="6" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+
+##### Alsultan, Arwa, Kevin Warwick, and Hong Wei. 
+#### "Non-conventional keystroke dynamics for user authentication."  <!-- .element: style="color:yellow;" -->
+##### Pattern Recognition Letters 89 (2017): 53-59.
+
+----------
+
+- Use non-conventional features<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+    - Editing features<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+    - Semi-timing features<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="3" -->
+    - Navigation features<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="4" -->
+- Use multiple classifiers (kNN, SGD, RF)<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="5" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+
+##### Lu, Xiaofeng, et al. 
+#### "Continuous authentication by free-text keystroke based on CNN and RNN." <!-- .element: style="color:yellow;" -->
+##### Computers & Security 96 (2020)
+
+-----
+
+- CNN to convolve -> Neighboring keystrokes affect timings<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="1" -->
+- RNN to look at the overall timing sequence<!-- .element: style="color:white;font-size:32px" class="fragment" data-fragment-index="2" -->
+</script></section><section data-markdown><script type="text/template">
+
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/nn.png" data-background-size="contain" -->
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+
+#### Datasets <!-- .element: style="color:yellow;" -->
+
+![](./media/datasets.png)
+</script></section><section data-markdown><script type="text/template"><!-- .slide:  data-transition="slide" -->
+
+#### Dataset Sample <!-- .element: style="color:yellow;" -->
+
+
+```
+Space KeyDown 63578429805254
+Space KeyUp 63578429805378
+Y KeyDown 63578429805472
+Y KeyUp 63578429805581
+O KeyDown 63578429805659
+U KeyDown 63578429805737
+O KeyUp 63578429805831
+U KeyUp 63578429805862
+R KeyDown 63578429805878
+Space KeyDown 63578429806002
+R KeyUp 63578429806034
+Space KeyUp 63578429806112
+C KeyDown 63578429806283
+O KeyDown 63578429806392
+C KeyUp 63578429806408
+O KeyUp 63578429806502
+M KeyDown 63578429806564
+M KeyUp 63578429806798
+M KeyDown 63578429807703
+M KeyUp 63578429807796
+E KeyDown 63578429807906
+E KeyUp 63578429808015
+N KeyDown 63578429808030
+N KeyUp 63578429808155
+C KeyDown 63578429808327
+C KeyUp 63578429808452
+E KeyDown 63578429808608
+E KeyUp 63578429808686
+M KeyDown 63578429808732
+M KeyUp 63578429808842
+E KeyDown 63578429808951
+E KeyUp 63578429809044
+N KeyDown 63578429809060
+T KeyDown 63578429809169
+N KeyUp 63578429809185
+T KeyUp 63578429809278
+Space KeyDown 63578429809325
+Space KeyUp 63578429809434
+```
+</script></section><section data-markdown><script type="text/template">
+## Research Methodology <!-- .element: style="color:yellow;" -->
+
+1. Use of distinct and state-of-the-art features and classifiers
+    1. Timeseries representation (2018)<!-- .element: style="color:white;font-size:32px"  -->
+    1. Distance Metric Fusion (2019)<!-- .element: style="color:white;font-size:32px"  -->
+    1. Non-conventional Features (2017)<!-- .element: style="color:white;font-size:32px" -->
+    1. CNN + RNN (2020)<!-- .element: style="color:white;font-size:32px" -->
+2. Two of the largest publicly available free-text datasets<!-- .element: style="color:white;font-size:32px" -->
+3. Compare identification rate with original and polluted keystroke datasets<!-- .element: style="color:white;font-size:32px" -->
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Initial Results <!-- .element: style="color:yellow;" -->
+
+1. Proposed 'Navigation Features' as an extension of non-conventional features.<!-- .element: style="color:white;font-size:32px"  -->
+1. Meant to represent how a user moves about a document<!-- .element: style="color:white;font-size:32px"  -->
+1. The addition of navigation features outforms the original set of non-conventional features<!-- .element: style="color:white;font-size:32px" -->
+1. User dentification accuracy seen in the high-nineties. <!-- .element: style="color:white;font-size:32px" --></script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/results.png" data-background-size="contain" -->
+</script></section><section data-markdown><script type="text/template">
+## Timeline for T2 <!-- .element: style="color:yellow;" -->
+
+- Implement the remaining three keystroke dynamics systems in first half of T2
+- Implement the selected user anonymization technique, and re-run all the keystroke analysis with the polluted keystrokes in second half of T2.
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/timeline.png" data-background-size="contain" -->
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Conclusion <!-- .element: style="color:yellow;" -->
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide:  data-background-transition="slide" data-background-image="./media/methodology.png" data-background-size="contain" -->
+</script></section></section><section  data-markdown><script type="text/template">
+### User Identification <!-- .element: style="color:yellow;" -->
+#### based on 
+### Keystroke Information<!-- .element: style="color:yellow;" -->
+
+<br><br>
+
+#### Queries and Suggestions
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
